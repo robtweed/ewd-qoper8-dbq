@@ -24,7 +24,7 @@ For more informaation on ewd-qoper8:
 	   
 ## Using ewd-qoper8-dbq
 
-The /examples directory contains two examples of how to use ewd-qoper8-dbq:
+The /examples directory contains three examples of how to use ewd-qoper8-dbq:
 
 - express-dbq.js: demonstrating how to use ewd-qoper8 with Express, using ewd-qoper8-dbq to provide a database-based queue
 - express-qx-dbq.js: demonstrating how to use ewd-qoper8 and ewd-qoper8-express with Express, 
@@ -35,7 +35,7 @@ In summary, to use ewd-qoper8-dbq, you must do the following:
 
 ### ewd-qoper8 Master Process
 
-First have loaded and initialised ewd-qoper8 in your master process, eg:
+First make sure you have loaded and initialised ewd-qoper8 in your master process, eg:
 
         var qoper8 = require('ewd-qoper8');
         var q = new qoper8.masterProcess();
@@ -78,7 +78,8 @@ Amongst other things, the ewd-qoper8-dbq initialisation function - dbq.master() 
 - addToQueue
 - handleMessage
 
-with modified versions that make use of the database queue.  So you can usually use ewd-qoper8 as normal.
+with modified versions that make use of the database queue.  So you can usually use ewd-qoper8 as normal, and behind the
+scenes the over-ride methods will automatically use the database queue instead.
 
 
 ### ewd-qoper8 Worker Module
